@@ -46,7 +46,8 @@
   , select: function () {
       var val = this.$menu.find('.active').attr('data-value')
       this.$element
-        .val(this.updater(val))
+        .focus()
+        .val(this.updater(val)+" ")
         .change()
       return this.hide()
     }
@@ -63,7 +64,7 @@
       this.$menu
         .insertAfter(this.$element)
         .css({
-          top: pos.top + pos.height
+          top:  pos.top - pos.height - 150
         , left: pos.left
         })
         .show()

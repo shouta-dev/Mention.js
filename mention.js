@@ -48,7 +48,7 @@
                     for (i in settings.queryBy) {
                         if (itemProps[settings.queryBy[i]]) {
                             var item = itemProps[settings.queryBy[i]].toLowerCase(),
-                                usernames = (this.query.toLowerCase()).match(new RegExp(settings.delimiter + '\\w+', "g")),
+                                usernames = (this.query.toLowerCase()).match(new RegExp(settings.delimiter + '\\S+', "g")),
                                 j;
                             if ( !! usernames) {
                                 for (j = 0; j < usernames.length; j++) {
